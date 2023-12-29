@@ -1,9 +1,12 @@
 function calcAverageCalories(days) {
-    let allCalories = 0;
-    for (const allDay of days) {
-       allCalories += allDay.calories;        
+  if (days.length === 0) {
+    return 0
+  }
+    let totalCalories = 0;
+    for (const day of days) {
+       totalCalories += day.calories;        
     }
-    return allCalories / days.length;
+    return totalCalories / days.length;
 }
 console.log(
   calcAverageCalories([
@@ -32,4 +35,4 @@ console.log(
 console.log(
   calcAverageCalories([])
 ); //0
-// В цьому прикладі консоль роздруковує NAN. Буду вдячна, якщо підкажете, що треба переробити)))
+// ДЯКУЮ!!!
